@@ -117,6 +117,16 @@ export const siteConfig = {
     headline: "Be the first to meet Effi.",
     subtext: "Get early access to Saarva's AI copilots.",
     submitEndpoint: process.env.NEXT_PUBLIC_WAITLIST_ENDPOINT || "",
+    // For Google Form integration with prefilled data:
+    // 1. Set your Google Form URL (viewform URL, not the short forms.gle link)
+    // 2. Get entry IDs from your form (see docs/GOOGLE_FORM_SETUP.md)
+    // Example: "https://docs.google.com/forms/d/e/1FAIpQLSd.../viewform"
+    googleFormUrl: process.env.NEXT_PUBLIC_GOOGLE_FORM_URL || "",
+    // Entry IDs for prefilling (get these from your Google Form)
+    // Format: { name: "entry.123456789", email: "entry.987654321", profession: "entry.111222333" }
+    googleFormEntryIds: process.env.NEXT_PUBLIC_GOOGLE_FORM_ENTRY_IDS 
+      ? JSON.parse(process.env.NEXT_PUBLIC_GOOGLE_FORM_ENTRY_IDS)
+      : undefined,
     fields: {
       name: "Name",
       email: "Email",

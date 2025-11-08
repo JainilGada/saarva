@@ -19,10 +19,34 @@ export default function WaitlistForm() {
     setError("");
 
     try {
+      const googleFormUrl = siteConfig.waitlist.googleFormUrl;
+      
+      // If Google Form URL is configured, redirect with prefilled data
+      if (googleFormUrl) {
+        // Get entry IDs from config or use defaults
+        const entryIds = siteConfig.waitlist.googleFormEntryIds || {
+          name: "entry.0",
+          email: "entry.1",
+          profession: "entry.2"
+        };
+
+        // Build the prefilled form URL
+        const params = new URLSearchParams({
+          [entryIds.name]: formData.name,
+          [entryIds.email]: formData.email,
+          [entryIds.profession]: formData.profession,
+        });
+
+        // Redirect to Google Form with prefilled data
+        window.location.href = `${googleFormUrl}?${params.toString()}`;
+        return; // Don't set submitted state yet, let Google Form handle it
+      }
+
+      // Otherwise, use API endpoint (existing behavior)
       const endpoint = siteConfig.waitlist.submitEndpoint;
       
       if (!endpoint) {
-        throw new Error("Waitlist endpoint not configured");
+        throw new Error("Waitlist endpoint not configured. Please set NEXT_PUBLIC_GOOGLE_FORM_URL or NEXT_PUBLIC_WAITLIST_ENDPOINT");
       }
 
       const response = await fetch(endpoint, {
