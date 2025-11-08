@@ -1,0 +1,15 @@
+{
+  "name": "saarva",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "cd apps/home && npm run dev",
+    "build": "cd apps/home && npm run build",
+    "start": "cd apps/home && npm start"
+  }
+}
+
