@@ -11,8 +11,8 @@ export default function ProductGrid() {
   };
 
   return (
-    <section id="products" className="py-20 px-4 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
+    <section id="products" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Meet the Copilots
@@ -44,9 +44,6 @@ export default function ProductGrid() {
                   aria-label={`${isExpanded ? 'Collapse' : 'Expand'} details for ${product.name}`}
                 >
                   {siteConfig.cta.learnMore}
-                  <span className={`ml-2 transition-transform duration-200 inline-block ${isExpanded ? 'rotate-180' : ''}`}>
-                    ▼
-                  </span>
                 </button>
 
                 {isExpanded && product.features && (

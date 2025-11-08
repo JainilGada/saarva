@@ -32,8 +32,8 @@ export default function Hero({ onExploreClick, onWaitlistClick }: HeroProps) {
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4 py-20 bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-4xl mx-auto text-center">
+    <section className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div className="max-w-4xl mx-auto text-center w-full">
         <div className="mb-8">
           <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-4xl">
             🤖

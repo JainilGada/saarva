@@ -98,6 +98,18 @@ export const siteConfig = {
         "Identify urgent action points automatically",
         "Save leaders hours of context-switching and report reading"
       ]
+    },
+    {
+      name: "SalesEase",
+      description: "AI Copilot for Sales Teams",
+      subdomain: "salesease.saarva.xyz",
+      features: [
+        "Generate personalized sales proposals and quotes",
+        "Analyze customer conversations and extract insights",
+        "Auto-draft follow-up emails and meeting summaries",
+        "Track deal pipeline and forecast revenue",
+        "Reduce admin time by 60% and close more deals"
+      ]
     }
   ],
   

@@ -56,8 +56,8 @@ export default function WaitlistForm() {
 
   if (isSubmitted) {
     return (
-      <section id="waitlist" className="py-20 px-4 bg-white">
-        <div className="max-w-2xl mx-auto text-center">
+      <section id="waitlist" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-2xl mx-auto text-center w-full">
           <div className="bg-green-50 border border-green-200 rounded-xl p-8">
             <div className="text-5xl mb-4">✅</div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -73,8 +73,8 @@ export default function WaitlistForm() {
   }
 
   return (
-    <section id="waitlist" className="py-20 px-4 bg-white">
-      <div className="max-w-2xl mx-auto">
+    <section id="waitlist" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <div className="max-w-2xl mx-auto w-full">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             {siteConfig.waitlist.headline}

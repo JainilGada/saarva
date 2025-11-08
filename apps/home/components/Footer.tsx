@@ -2,8 +2,8 @@ import { siteConfig } from "@config/siteConfig";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-12 px-4">
-      <div className="max-w-6xl mx-auto">
+    <footer className="bg-gray-900 text-gray-300 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto w-full">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-center md:text-left">
             {siteConfig.footer.text}

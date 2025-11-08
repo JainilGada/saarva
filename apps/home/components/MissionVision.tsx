@@ -2,8 +2,8 @@ import { siteConfig } from "@config/siteConfig";
 
 export default function MissionVision() {
   return (
-    <section className="py-20 px-4 bg-white">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <div className="max-w-4xl mx-auto w-full">
         <div className="grid md:grid-cols-2 gap-12 mb-12">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Vision</h2>
