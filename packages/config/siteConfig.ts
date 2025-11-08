@@ -1,3 +1,28 @@
+/**
+ * Helper function to generate product URLs based on environment
+ * In development, uses localhost with subdomain (e.g., fingenie.localhost:3000)
+ * In production, uses the production domain (e.g., https://fingenie.saarva.xyz)
+ */
+export const getProductUrl = (subdomain: string): string => {
+  // Check if we're in a browser environment (client-side)
+  const isClient = typeof window !== "undefined";
+  const isDevelopment = 
+    (typeof process !== "undefined" && process.env.NODE_ENV === "development") ||
+    (isClient && (window.location.hostname === "localhost" || window.location.hostname.includes("localhost")));
+  
+  const localPort = 
+    (typeof process !== "undefined" && process.env.NEXT_PUBLIC_LOCAL_PORT) ||
+    (isClient ? (window.location.port || "3000") : "3000");
+  
+  if (isDevelopment) {
+    // Extract subdomain prefix (e.g., "fingenie" from "fingenie.saarva.xyz")
+    const subdomainPrefix = subdomain.split(".")[0];
+    return `http://${subdomainPrefix}.localhost:${localPort}`;
+  }
+  
+  return `https://${subdomain}`;
+};
+
 export const siteConfig = {
   brand: "Saarva",
   assistant: "Effi",
@@ -17,31 +42,26 @@ export const siteConfig = {
     {
       name: "FinGenie",
       description: "AI Copilot for Finance & CAs",
-      url: "https://fingenie.saarva.xyz",
       subdomain: "fingenie.saarva.xyz"
     },
     {
       name: "MeetMind",
       description: "AI Copilot for Product Managers",
-      url: "https://meetmind.saarva.xyz",
       subdomain: "meetmind.saarva.xyz"
     },
     {
       name: "CompliEase",
       description: "AI Copilot for Legal & Compliance",
-      url: "https://compliease.saarva.xyz",
       subdomain: "compliease.saarva.xyz"
     },
     {
       name: "HireEase",
       description: "AI Copilot for HR Teams",
-      url: "https://hireease.saarva.xyz",
       subdomain: "hireease.saarva.xyz"
     },
     {
       name: "Briefly",
       description: "AI Copilot for Founders & Executives",
-      url: "https://briefly.saarva.xyz",
       subdomain: "briefly.saarva.xyz"
     }
   ],
