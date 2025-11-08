@@ -57,7 +57,7 @@ module.exports = nextConfig;
 
 4. Build settings:
    - **Build command:** `cd apps/home && npm install && npm run build`
-   - **Build output directory:** `apps/home/.vercel/output/static`
+   - **Build output directory:** `apps/home/out`
    - **Root directory:** `/`
 
 ## Step-by-Step Deployment
@@ -80,7 +80,7 @@ module.exports = nextConfig;
   ```
 - **Build output directory:** 
   ```
-  apps/home/.next
+  apps/home/out
   ```
 - **Root directory:** 
   ```
@@ -148,7 +148,7 @@ After deployment:
 |---------|-------|
 | Framework | Next.js |
 | Build Command | `cd apps/home && npm install && npm run build` |
-| Output Directory | `apps/home/.next` |
+| Output Directory | `apps/home/out` |
 | Node Version | 18 or 20 |
 | Root Directory | `/` |
 

@@ -17,7 +17,7 @@ When setting up your project in Cloudflare Pages dashboard, use these exact valu
 |---------|-------|
 | **Framework preset** | `Next.js` |
 | **Build command** | `cd apps/home && npm install && npm run build` |
-| **Build output directory** | `apps/home/.next` |
+| **Build output directory** | `apps/home/out` |
 | **Root directory** | `/` (leave empty or `/`) |
 | **Node.js version** | `18` or `20` |
 
