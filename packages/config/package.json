@@ -1,0 +1,8 @@
+{
+  "name": "@saarva/config",
+  "version": "1.0.0",
+  "main": "siteConfig.ts",
+  "types": "siteConfig.ts",
+  "private": true
+}
+
