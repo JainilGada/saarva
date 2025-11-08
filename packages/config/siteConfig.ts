@@ -126,11 +126,10 @@ export const siteConfig = {
   
   footer: {
     text: "Built by Saarva • Powered by Effi",
+    email: "saarvatech@gmail.com",
     links: {
       privacy: "/privacy",
-      terms: "/terms",
-      contact: "/contact",
-      linkedin: "https://linkedin.com/company/saarva"
+      terms: "/terms"
     }
   },
   

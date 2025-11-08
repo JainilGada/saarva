@@ -25,20 +25,11 @@ export default function Footer() {
               Terms
             </a>
             <a
-              href={siteConfig.footer.links.contact}
+              href={`mailto:${siteConfig.footer.email}`}
               className="hover:text-white transition-colors duration-200"
-              aria-label="Contact Us"
+              aria-label="Contact Email"
             >
-              Contact
-            </a>
-            <a
-              href={siteConfig.footer.links.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors duration-200"
-              aria-label="LinkedIn"
-            >
-              LinkedIn
+              {siteConfig.footer.email}
             </a>
           </nav>
         </div>
